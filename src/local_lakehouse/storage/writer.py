@@ -10,6 +10,7 @@ getting into the work here, first i would like convert the key-value paired .jso
 import pyarrow as pa
 import pyarrow.parquet as pq
 
+#function should return the parquet file which is created, basicall the path
 def records_to_parquet(records):
     table = pa.Table.from_pylist(records)
     #table is now column oriented internally
@@ -18,4 +19,7 @@ def records_to_parquet(records):
         "data.parquet",
         compression="snappy"
     )
+    return "data.parquet"
+
+
 

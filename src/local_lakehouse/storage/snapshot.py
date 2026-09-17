@@ -9,7 +9,7 @@ VERSION_PATH = Path("data/snapshots/version.txt")
 def get_current_snapshot():
     with open(VERSION_PATH,"r") as file:
         current_version = file.read().strip()
-    return current_verison
+    return current_version
 
 def commit_snapshot(new_manifest_path):
     with open(VERSION_PATH,"w") as file:
